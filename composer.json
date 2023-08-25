@@ -1,0 +1,17 @@
+{
+  "name": "dsitovs/magento2-customer-attribute",
+  "version": "1.0.0",
+  "description": "Simple module to display custom 'Status' attribute for the customer",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "TestExample\\CustomerAttribute\\": ""
+    }
+  }
+}

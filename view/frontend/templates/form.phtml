@@ -1,0 +1,27 @@
+<?php
+/**
+ * @var \TestExample\CustomerAttribute\Block\Form $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+
+<form class="form" action="<?= $escaper->escapeUrl($block->getPostActionUrl()) ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
+    <?= /* @noEscape */ $block->getBlockHtml('formkey'); ?>
+
+    <fieldset class="fieldset create complete">
+
+        <div class="field field-code required">
+            <label for="code" class="label">
+                <span><?= $escaper->escapeHtml(__('Customer Status')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" name="status" autocomplete="off" id="status" value="<?= $escaper->escapeHtmlAttr($block->getCustomerStatus()) ?>" title="<?= $escaper->escapeHtmlAttr(__('Customer Status')) ?>" class="input-text" maxlength="255" data-validate="{validate-length alphanumeric maximum-length-255}">
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary" title="<?= $escaper->escapeHtmlAttr(__('Save')) ?>"><span><?= $escaper->escapeHtml(__('Save')) ?></span></button>
+        </div>
+    </div>
+</form>
